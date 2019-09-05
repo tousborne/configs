@@ -37,8 +37,8 @@ window:
   #   - none: Neither borders nor title bar
   decorations: full
 
-  # When true, alacritty starts maximized.
-  start_maximized: false
+  # Start maximized.
+  startup_mode: Maximized
 
 scrolling:
   # How many lines of scrollback to keep,
@@ -137,9 +137,6 @@ font:
   # for retina displays, but for non-retina you probably want this set to
   # false.
   # use_thin_strokes: false
-
-# Should display the render timer
-render_timer: false
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
