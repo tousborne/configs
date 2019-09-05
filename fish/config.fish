@@ -15,6 +15,10 @@ set PATH $PATH $HOME/.cargo/bin
 # Turn off python __pycache__ writing
 set -x PYTHONDONTWRITEBYTECODE 'true'
 
+# Wayland environmental variables
+set -x MOZ_ENABLE_WAYLAND 1
+
+
 # Keychain: auto-load ssh agent
 if status --is-interactive
     keychain --eval --quiet -Q id_rsa | source
