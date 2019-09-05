@@ -20,7 +20,7 @@ if dein#load_state(expand('~/.config/nvim/dein'))
 	call dein#add('Shougo/deoplete.nvim')
     call dein#add('jakedouglas/exuberant-ctags')
     "call dein#add('vim-syntastic/syntastic')
-    call dein#add('w0rp/ale')
+    call dein#add('dense-analysis/ale')
     call dein#add('farmergreg/vim-lastplace')
     call dein#add('KorySchneider/vim-trim')
 
@@ -37,7 +37,7 @@ if dein#load_state(expand('~/.config/nvim/dein'))
     call dein#add('tomasr/molokai')
 
     " Syntax
-	"call dein#add('rust-lang/rust.vim')
+	call dein#add('rust-lang/rust.vim')
     call dein#add('sheerun/vim-polyglot')
     call dein#add('ntpeters/vim-better-whitespace')
     call dein#add('fatih/vim-go')
@@ -62,10 +62,11 @@ endif
 set title
 
 " Set tabs
+set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set expandtab
+"set expandtab
 
 " Backup and history settings
 set nobackup
@@ -172,3 +173,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Update plugins on start
 "autocmd VimEnter * call dein#update()
+
+" Fix overriding tabstop WTF?!
+autocmd FileType rust setlocal tabstop=4
